@@ -45,3 +45,18 @@ a {
 a:hover {
   color: hsl(0, 0%, 90%);
 }
+
+div {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 20rem;
+}
+
+div input {
+  padding: 1rem;
+  width: 100%;
+  font: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
