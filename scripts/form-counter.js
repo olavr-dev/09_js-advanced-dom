@@ -1,6 +1,6 @@
-let paragraphElement = document.getElementById('event');
-let inputField = document.getElementById('text-field');
-let remainingCharactersElement = document.getElementById('counter');
+const paragraphElement = document.getElementById('event');
+const inputField = document.getElementById('text-field');
+const remainingCharactersElement = document.getElementById('counter');
 
 function changeParagraphText() {
   paragraphElement.textContent = 'Thank you for clicking :)';
@@ -8,13 +8,21 @@ function changeParagraphText() {
 }
 
 function updateCounter(event) {
-  let enteredValue = event.target.value;
-  let enteredTextLength = enteredValue.length;
-  let maxAllowedCharacters = event.target.maxLength;
+  const enteredValue = event.target.value;
+  const enteredTextLength = enteredValue.length;
+  const maxAllowedCharacters = event.target.maxLength;
 
-  let remainingCharacters = maxAllowedCharacters - enteredTextLength;
+  const remainingCharacters = maxAllowedCharacters - enteredTextLength;
 
   remainingCharactersElement.textContent = remainingCharacters;
+
+  if (remainingCharacters <= 30) {
+    remainingCharactersElement.classList.add('warning');
+    event.target.classList.add('warning');
+  } else {
+    remainingCharactersElement.classList.remove('warning');
+    event.target.classList.remove('warning');
+  }
 }
 
 inputField.addEventListener('input', updateCounter);

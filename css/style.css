@@ -33,7 +33,7 @@ p {
 
 a {
   text-decoration: none;
-  color: hsl(17, 90%, 48%);
+  color: hsl(17, 91%, 37%);
   font-weight: 700;
   transition: color 200ms ease-in-out;
   -webkit-transition: color 200ms ease-in-out;
@@ -68,7 +68,7 @@ ul {
 }
 
 li p {
-  margin: 1rem 2rem;
+  margin: 2rem 2rem;
 }
 
 label {
@@ -101,6 +101,49 @@ button {
 }
 
 button:hover {
-  background-color: hsl(17, 90%, 48%);
+  background-color: hsl(17, 91%, 37%);
   color: hsl(0, 0%, 90%);
+}
+
+input.warning {
+  background-color: hsl(17, 91%, 37%);
+  color: hsl(0, 0%, 90%);
+}
+
+span {
+  background-color: hsl(0, 0%, 90%);
+  display: inline-block;
+  width: 6.5rem;
+  position: relative;
+  text-align: right;
+  font-weight: 700;
+  padding: 0.5rem 1rem 0.5rem 0;
+  color: hsl(240, 15%, 15%);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+#counter {
+  background-color: hsl(250, 11%, 21%);
+  position: absolute;
+  color: hsl(0, 0%, 90%);
+  font-weight: 700;
+  width: 3rem;
+  left: -2px;
+  top: 0;
+  padding: 0.5rem 0.6rem;
+}
+
+#counter.warning {
+  background-color: hsl(17, 91%, 37%);
+  position: absolute;
+  color: hsl(0, 0%, 90%);
+  font-weight: 700;
+  width: 3rem;
+  left: -2px;
+  top: 0;
+  padding: 0.5rem 0.6rem;
 }
