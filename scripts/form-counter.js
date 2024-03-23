@@ -1,19 +1,21 @@
 let paragraphElement = document.getElementById('event');
 let inputField = document.getElementById('text-field');
-let counterParagraph = document.getElementById('counter');
+let remainingCharactersElement = document.getElementById('counter');
 
 function changeParagraphText() {
   paragraphElement.textContent = 'Thank you for clicking :)';
   console.log('Paragraph Clicked');
 }
 
-function updateCounter() {
-  let counterValue = inputField.value.length;
-  counterParagraph.innerHTML = `${counterValue}`;
+function updateCounter(event) {
+  let enteredValue = event.target.value;
+  let enteredTextLength = enteredValue.length;
+  let maxAllowedCharacters = event.target.maxLength;
+
+  let remainingCharacters = maxAllowedCharacters - enteredTextLength;
+
+  remainingCharactersElement.textContent = remainingCharacters;
 }
 
-console.dir(inputField);
-
 inputField.addEventListener('input', updateCounter);
-
 paragraphElement.addEventListener('click', changeParagraphText);
