@@ -16,9 +16,14 @@ function updateCounter(event) {
 
   remainingCharactersElement.textContent = remainingCharacters;
 
-  if (remainingCharacters <= 30) {
+  if (remainingCharacters === 0) {
+    remainingCharactersElement.classList.add('error');
+    event.target.classList.add('error');
+  } else if (remainingCharacters <= 30) {
     remainingCharactersElement.classList.add('warning');
     event.target.classList.add('warning');
+    remainingCharactersElement.classList.remove('error');
+    event.target.classList.remove('error');
   } else {
     remainingCharactersElement.classList.remove('warning');
     event.target.classList.remove('warning');

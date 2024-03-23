@@ -33,7 +33,7 @@ p {
 
 a {
   text-decoration: none;
-  color: hsl(17, 91%, 37%);
+  color: hsl(195, 85%, 41%);
   font-weight: 700;
   transition: color 200ms ease-in-out;
   -webkit-transition: color 200ms ease-in-out;
@@ -101,12 +101,17 @@ button {
 }
 
 button:hover {
-  background-color: hsl(17, 91%, 37%);
+  background-color: hsl(195, 85%, 41%);
   color: hsl(0, 0%, 90%);
 }
 
 input.warning {
-  background-color: hsl(17, 91%, 37%);
+  background-color: hsl(195, 85%, 41%);
+  color: hsl(0, 0%, 90%);
+}
+
+input.error {
+  background-color: hsl(0, 85%, 41%);
   color: hsl(0, 0%, 90%);
 }
 
@@ -131,18 +136,29 @@ span {
   position: absolute;
   color: hsl(0, 0%, 90%);
   font-weight: 700;
-  width: 3rem;
+  width: 3.3rem;
   left: -2px;
   top: 0;
   padding: 0.5rem 0.6rem;
 }
 
 #counter.warning {
-  background-color: hsl(17, 91%, 37%);
+  background-color: hsl(195, 85%, 41%);
   position: absolute;
   color: hsl(0, 0%, 90%);
   font-weight: 700;
-  width: 3rem;
+  width: 3.3rem;
+  left: -2px;
+  top: 0;
+  padding: 0.5rem 0.6rem;
+}
+
+#counter.error {
+  background-color: hsl(0, 85%, 41%);
+  position: absolute;
+  color: hsl(0, 0%, 90%);
+  font-weight: 700;
+  width: 3.3rem;
   left: -2px;
   top: 0;
   padding: 0.5rem 0.6rem;
