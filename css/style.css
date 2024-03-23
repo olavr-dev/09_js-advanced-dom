@@ -35,28 +35,72 @@ a {
   text-decoration: none;
   color: hsl(17, 90%, 48%);
   font-weight: 700;
-  transition: color 500ms ease-in-out;
-  -webkit-transition: color 500ms ease-in-out;
-  -moz-transition: color 500ms ease-in-out;
-  -ms-transition: color 500ms ease-in-out;
-  -o-transition: color 500ms ease-in-out;
+  transition: color 200ms ease-in-out;
+  -webkit-transition: color 200ms ease-in-out;
+  -moz-transition: color 200ms ease-in-out;
+  -ms-transition: color 200ms ease-in-out;
+  -o-transition: color 200ms ease-in-out;
 }
 
 a:hover {
   color: hsl(0, 0%, 90%);
 }
 
-div {
+form {
+  width: 60%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 2rem auto;
-  width: 20rem;
+  padding: 2rem;
+  background-color: hsl(248, 11%, 26%);
 }
 
-div input {
-  padding: 1rem;
+ul {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+
+li p {
+  margin: 1rem 2rem;
+}
+
+label {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+input {
+  padding: 1rem;
+  width: 30rem;
   font: inherit;
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+button {
+  width: 30rem;
+  margin-top: 2rem;
+  border: 0;
+  padding: 1rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+}
+
+button:hover {
+  background-color: hsl(17, 90%, 48%);
+  color: hsl(0, 0%, 90%);
 }
