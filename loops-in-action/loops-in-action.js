@@ -65,3 +65,53 @@ function displayUserData() {
 }
 
 userDataButtonElement.addEventListener('click', displayUserData);
+
+// ---------------------------------------------//
+// -------- Fourth Exercise: Statistics  -------//
+// ---------------------------------------------//
+
+const rollDiceButtonElement = document.querySelector('#statistics button');
+
+function rollDice() {
+  return Math.floor(Math.random() * 6 + 1);
+}
+
+function getNumberOfDiceRolls() {
+  const targetNumberInputElement = document.querySelector(
+    '#user-target-number'
+  );
+  const diceRollsListElement = document.querySelector('#dice-rolls');
+
+  const enteredNumber = targetNumberInputElement.value;
+  diceRollsListElement.innerHTML = '';
+
+  let hasRolledTargetNumber = false;
+  let numberOfRolls = 0;
+
+  while (!hasRolledTargetNumber) {
+    const rolledNumber = rollDice();
+
+    numberOfRolls++;
+    const newRollListElement = document.createElement('li');
+    const outputText = 'Roll ' + numberOfRolls + ': ' + rolledNumber;
+    newRollListElement.textContent = outputText;
+    diceRollsListElement.append(newRollListElement);
+    // Long Way
+    // if (rolledNumber == enteredNumber) {
+    //   hasRolledTargetNumber = true;
+    // }
+    // Short Way
+    // Will always return a boolean (True/False)
+    hasRolledTargetNumber = rolledNumber == enteredNumber;
+  }
+
+  const outputTotalRollsElement = document.querySelector('#output-total-rolls');
+  const outputTargetNumberElement = document.querySelector(
+    '#output-target-number'
+  );
+
+  outputTargetNumberElement.textContent = enteredNumber;
+  outputTotalRollsElement.textContent = numberOfRolls;
+}
+
+rollDiceButtonElement.addEventListener('click', getNumberOfDiceRolls);
